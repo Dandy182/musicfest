@@ -1,0 +1,32 @@
+{
+  "name": "musicfest",
+  "version": "1.0.0",
+  "description": "\"Pagina de festivales de musica\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dandy182/musicfest.git"
+  },
+  "keywords": [
+    "'musicFest\""
+  ],
+  "author": "\"Dandy182\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dandy182/musicfest/issues"
+  },
+  "homepage": "https://github.com/Dandy182/musicfest#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.63.4"
+  },
+  "devDependencies": {
+    "gulp-avif": "^1.1.1",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-imagemin": "^8.0.0",
+    "imagemin": "^8.0.1"
+  }
+}
