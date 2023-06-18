@@ -1,1 +1,41 @@
 @use './variables' as v;
+
+
+.html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+*,
+*:after, 
+*:before{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    margin: 0;
+    font-family: v.$principalFont;
+
+}
+
+h1{
+    font-size: 4vh;
+}
+
+h2{
+    font-size: 3.6vh;
+}
+
+.contenedor{
+    width:1200px;
+    margin: 0 auto;
+    max-width: 95%;
+}

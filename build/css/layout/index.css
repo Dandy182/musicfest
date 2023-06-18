@@ -1,3 +1,8 @@
-
+.header {
+  background-color: #4CB8B3;
+}
+.header .contenido__header {
+  color: #fff;
+}
 
 /*# sourceMappingURL=index.css.map */
