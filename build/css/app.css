@@ -306,7 +306,7 @@ template {
   display: none;
 }
 
-.html {
+html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
@@ -335,21 +335,26 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 3.2vh;
+  font-size: 3.6rem;
 }
 
 h2 {
-  font-size: 3.6vh;
+  font-size: 3vh;
 }
 
 .contenedor {
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   max-width: 95%;
 }
 
 .btn {
   padding: 0.5rem 1rem;
+}
+
+video {
+  display: block;
+  max-width: 100%;
 }
 
 .header {
@@ -364,8 +369,8 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     gap: 2rem;
+    align-items: center;
   }
 }
 
@@ -374,7 +379,6 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 0;
   }
 }
@@ -385,6 +389,44 @@ h2 {
 }
 .navegacionPrincipal .btnNav:hover {
   color: #f53756;
+}
+
+.videoMain {
+  overflow: hidden;
+  height: 600px;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.slogan {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  align-items: center;
+}
+@media only screen and (min-width: 800px) {
+  .slogan {
+    height: 100%;
+  }
+}
+.slogan h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 0;
+  align-items: flex-start;
+}
+.slogan h1 span {
+  font-size: 2rem;
+  background-color: #f53756;
+  text-shadow: rgba(0, 0, 0, 0.3019607843) 1px 0 10px;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=app.css.map */

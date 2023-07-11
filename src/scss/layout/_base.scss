@@ -7,14 +7,16 @@
     .contenido__header{
         color:v.$blanco;
         @include m.MedScreen(768px){
-            @include m.flex(row, space-between, 2rem  )
+            @include m.flex(row, space-between, 2rem){
+                align-items:center
+            }
         }
     }
 }
 
 .navegacionPrincipal{
     @include m.MedScreen(768px){
-        @include m.flex(row, center, 0  )
+        @include m.flex(row, center, 0)
     }
     .btnNav{
         color:v.$blanco;

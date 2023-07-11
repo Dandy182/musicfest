@@ -306,7 +306,7 @@ template {
   display: none;
 }
 
-.html {
+html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
@@ -335,21 +335,26 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 3.2vh;
+  font-size: 3.6rem;
 }
 
 h2 {
-  font-size: 3.6vh;
+  font-size: 3vh;
 }
 
 .contenedor {
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   max-width: 95%;
 }
 
 .btn {
   padding: 0.5rem 1rem;
+}
+
+video {
+  display: block;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
