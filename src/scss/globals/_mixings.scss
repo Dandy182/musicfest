@@ -1,6 +1,12 @@
 @use './variables' as v;
 
 
+@mixin MedScreen($ancho){
+    @media only screen and (min-width:$ancho){
+        @content;
+    }
+}
+
 
 @mixin flex($direction:row, $justify:center, $gap:gap ){
     display:flex;

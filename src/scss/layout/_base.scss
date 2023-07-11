@@ -1,15 +1,27 @@
 @use '../globals/variables' as v;
+@use '../globals/mixings' as m;
 
 .header{
     padding: v.$spaced;
     background-color: v.$verde;
     .contenido__header{
         color:v.$blanco;
+        @include m.MedScreen(768px){
+            @include m.flex(row, space-between, 2rem  )
+        }
     }
 }
 
 .navegacionPrincipal{
-    a{
+    @include m.MedScreen(768px){
+        @include m.flex(row, center, 0  )
+    }
+    .btnNav{
         color:v.$blanco;
+        font-family: v.$principalFont;
+        transition: all .4s ease-in-out;
+        &:hover{
+            color:v.$rosa;
+        }
     }
 }

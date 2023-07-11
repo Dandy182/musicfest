@@ -8,6 +8,7 @@ const plumber = require('gulp-plumber');
 
 function css(done){
     src('./src/scss/**/*.scss')
+    .pipe(plumber())
     .pipe(sass({outputStyle:'compressed'}))
     .pipe(dest('build/css'))
     done()
