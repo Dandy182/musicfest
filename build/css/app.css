@@ -172,7 +172,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -255,7 +255,6 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
@@ -324,11 +323,14 @@ body {
 
 a {
   text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
 h1, h2, h3, h4 {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
 h1 {
@@ -345,10 +347,19 @@ h2 {
   max-width: 95%;
 }
 
+.btn {
+  padding: 0.5rem 1rem;
+}
+
 .header {
+  padding: 2rem;
   background-color: #4CB8B3;
 }
 .header .contenido__header {
+  color: #fff;
+}
+
+.navegacionPrincipal a {
   color: #fff;
 }
 

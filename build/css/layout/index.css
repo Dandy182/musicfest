@@ -1,7 +1,12 @@
 .header {
+  padding: 2rem;
   background-color: #4CB8B3;
 }
 .header .contenido__header {
+  color: #fff;
+}
+
+.navegacionPrincipal a {
   color: #fff;
 }
 

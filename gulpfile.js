@@ -1,13 +1,16 @@
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch, parallel} = require('gulp');
 const sass = require("gulp-dart-sass");
 const imgMin = require('imagemin');
 const imgAvf = require('gulp-avif');
+const plumber = require('gulp-plumber');
 
 
-function css(cb){
+
+function css(done){
     src('./src/scss/**/*.scss')
-    .pipe(sass())
+    .pipe(sass({outputStyle:'compressed'}))
     .pipe(dest('build/css'))
+    done()
 }
 
 function imgReducer(cb){
@@ -30,4 +33,6 @@ function watcher(cb){
 
 exports.css = css;
 exports.watcher = watcher;
-exports.imgMin = imgMin;
+exports.avif = avif;
+exports.imgReducer = imgReducer;
+exports.imgDev = parallel(avif, imgReducer)

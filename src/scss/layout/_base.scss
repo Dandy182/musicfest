@@ -1,8 +1,15 @@
 @use '../globals/variables' as v;
 
 .header{
+    padding: v.$spaced;
     background-color: v.$verde;
     .contenido__header{
+        color:v.$blanco;
+    }
+}
+
+.navegacionPrincipal{
+    a{
         color:v.$blanco;
     }
 }

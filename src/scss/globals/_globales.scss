@@ -18,11 +18,14 @@ body{
 
 a{
     text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 h1, h2, h3, h4{
     margin: 0;
     font-family: v.$principalFont;
+    text-align: center;
 
 }
 
@@ -38,4 +41,8 @@ h2{
     width:1200px;
     margin: 0 auto;
     max-width: 95%;
+}
+
+.btn{
+    padding: .5rem 1rem;
 }

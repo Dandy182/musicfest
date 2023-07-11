@@ -4,7 +4,8 @@
   "description": "\"Pagina de festivales de musica\"",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/scss:build/css"
+    "sass": "sass --watch src/scss:build/css",
+    "imgReduce": "gulp imgReduce"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
   "devDependencies": {
     "gulp-avif": "^1.1.1",
     "gulp-dart-sass": "^1.1.0",
-    "gulp-imagemin": "^8.0.0",
-    "imagemin": "^8.0.1"
+    "gulp-imagemin": "^7.0.0",
+    "gulp-plumber": "^1.2.1",
+    "imagemin": "^7.0.0"
   }
 }
