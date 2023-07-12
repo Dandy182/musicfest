@@ -1,0 +1,38 @@
+@use '../globals/variables' as v;
+@use '../globals/mixings' as m;
+ 
+.sobreFestival{
+    padding: 4rem 0; 
+}
+
+@include m.MedScreen(768px){
+    .sobreFestival__datos{
+        @include m.flex(row, space-evenly, 2){
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+    
+}
+
+
+.img__sobreFestival, 
+.info__sobreFestival{
+    padding-bottom: v.$spaced;
+    flex-basis: calc(45% - 2rem);
+}
+.info__sobreFestival{
+    text-align: left;
+    h2{
+        text-align: left;
+    }
+    .fechaEvento{
+        color:v.$rosa;
+        font-size: 1.6rem;
+        font-family: v.$principalFont;
+    }
+
+    .info__sobreFestival__intro{
+        text-align: justify;
+    }
+}

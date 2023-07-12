@@ -23,7 +23,9 @@ a{
     font-size:1.2rem;
 }
 
-
+img{
+    max-width: 100%;
+}
 
 h1, h2, h3, h4{
     margin: 0;
@@ -48,6 +50,11 @@ h2{
 
 .btn{
     padding: .5rem 1rem;
+}
+
+p{
+    font-size: 1.6rem;
+    font-family: v.$principalFont;
 }
 
 video{

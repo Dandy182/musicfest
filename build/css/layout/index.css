@@ -34,27 +34,33 @@
 
 .videoMain {
   overflow: hidden;
-  height: 600px;
+  max-height: 600px;
   margin: 0 auto;
   max-width: 100%;
   position: relative;
+}
+.videoMain::after {
+  content: "";
+  background: linear-gradient(-45deg, rgba(245, 55, 87, 0.588) 0%, rgba(116, 47, 151, 0.527) 100%);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .slogan {
   position: absolute;
   color: #fff;
   width: 100%;
-  height: 40%;
+  height: 100%;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0;
   align-items: center;
-}
-@media only screen and (min-width: 800px) {
-  .slogan {
-    height: 100%;
-  }
 }
 .slogan h1 {
   display: flex;
@@ -67,7 +73,42 @@
   font-size: 2rem;
   background-color: #f53756;
   text-shadow: rgba(0, 0, 0, 0.3019607843) 1px 0 10px;
-  padding: 1rem;
+  padding: 1vh;
+}
+
+.sobreFestival {
+  padding: 4rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .sobreFestival__datos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+.img__sobreFestival,
+.info__sobreFestival {
+  padding-bottom: 2rem;
+  flex-basis: calc(45% - 2rem);
+}
+
+.info__sobreFestival {
+  text-align: left;
+}
+.info__sobreFestival h2 {
+  text-align: left;
+}
+.info__sobreFestival .fechaEvento {
+  color: #f53756;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+.info__sobreFestival .info__sobreFestival__intro {
+  text-align: justify;
 }
 
 /*# sourceMappingURL=index.css.map */
