@@ -15,8 +15,11 @@ function css(done){
 }
 
 function imgReducer(done){
-    src('/src/img/**/**')
-    .pipe(imgMin())
+    const op = {optimizationLevel:3};
+
+
+    src('/src/img/**/*')
+    .pipe(imageMin(cache(op)))
     .pipe(dest('build/img'));
     done()
 
