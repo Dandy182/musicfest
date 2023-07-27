@@ -1,7 +1,7 @@
 const {src, dest, watch, parallel} = require('gulp');
 const sass = require("gulp-dart-sass");
 const imageMin = require('gulp-imagemin');
-const imageAvf = require('gulp-avif');
+const imgAvf = require('gulp-avif');
 const plumber = require('gulp-plumber');
 const webp = require('gulp-webp');
 
@@ -29,17 +29,17 @@ function imgReducer(done){
 function versionWebp(done){
     const op = {quality:50};
 
-    src('src/img/**/*.{png, jpg}')
+    src(`src/img/**/*.jpg`)
     .pipe(webp(op))
     .pipe(dest('build/img'));
     done()
 };
-
+ 
 
 
 
 function avif(done){
-    src('/src/img/**/*')
+    src('/src/img/**/*.{jpg, png}')
     .pipe(imgAvf())
     .pipe(dest('build/img'));
     done()
