@@ -1,13 +1,17 @@
 const {src, dest, watch, parallel} = require('gulp');
 const sass = require("gulp-dart-sass");
+const plumber = require('gulp-plumber');
+const cache = require('gulp-cache');
+
+//imagenes
 const imageMin = require('gulp-imagemin');
 const imgAvf = require('gulp-avif');
-const plumber = require('gulp-plumber');
 const webp = require('gulp-webp');
 
 
+
 function css(done){
-    src('/src/scss/**/*.scss')
+    src('./src/scss/**/*.scss')
     .pipe(plumber())
     .pipe(sass({outputStyle:'compressed'}))
     .pipe(dest('build/css'))
@@ -18,7 +22,7 @@ function imgReducer(done){
     const op = {optimizationLevel:3};
 
 
-    src('/src/img/**/*')
+    src('./src/img/**/*')
     .pipe(imageMin(cache(op)))
     .pipe(dest('build/img'));
     done()
@@ -27,9 +31,11 @@ function imgReducer(done){
 
 
 function versionWebp(done){
-    const op = {quality:50};
+    const op = {
+        quality:50
+    };
 
-    src(`src/img/**/*.jpg`)
+    src('src/img/**/*.{jpg, png}')
     .pipe(webp(op))
     .pipe(dest('build/img'));
     done()
@@ -39,7 +45,7 @@ function versionWebp(done){
 
 
 function avif(done){
-    src('/src/img/**/*.{jpg, png}')
+    src('./src/img/**/*.{jpg, png}')
     .pipe(imgAvf())
     .pipe(dest('build/img'));
     done()

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Dandy182/musicfest#readme",
   "dependencies": {
     "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
     "sass": "^1.63.4"
   },
   "devDependencies": {
