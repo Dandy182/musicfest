@@ -116,5 +116,69 @@
   padding: 2rem 0;
   color: #fff;
 }
+.lineup p {
+  text-align: center;
+}
+
+.contenedorEvento {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.evento {
+  width: 400px;
+  padding: 2rem 0;
+  color: #000;
+  margin: 2rem auto;
+}
+.evento .list {
+  list-style: none;
+  padding: 0;
+}
+.evento .list li {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+.evento p::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  display: block;
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.rock p::after {
+  background-image: url("/build/img/icono_rock.png");
+}
+
+.EDM p::after {
+  background-image: url("/build/img/icono_edm.png");
+}
+
+.amarillo {
+  background-color: #fef46d;
+}
+.amarillo .list :nth-child(2n+1) {
+  background-color: #e1d85f;
+  font-weight: 600;
+}
+
+.verde {
+  background-color: #4CB8B3;
+}
+.verde .list :nth-child(2n+1) {
+  background-color: #409b96;
+  font-weight: 600;
+}
 
 /*# sourceMappingURL=index.css.map */
