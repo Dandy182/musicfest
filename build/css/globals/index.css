@@ -346,6 +346,10 @@ h2 {
   font-size: 3vh;
 }
 
+h3 {
+  font-size: 2.8rem;
+}
+
 .contenedor {
   width: 1000px;
   margin: 0 auto;

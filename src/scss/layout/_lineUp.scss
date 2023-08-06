@@ -1,0 +1,8 @@
+@use '../globals/variables' as v;
+@use '../globals/mixings' as m;
+
+.lineup{
+    background-color: v.$rosa;
+    padding:v.$spaced 0;
+    color:v.$blanco;
+}

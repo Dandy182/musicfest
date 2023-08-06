@@ -346,6 +346,10 @@ h2 {
   font-size: 3vh;
 }
 
+h3 {
+  font-size: 2.8rem;
+}
+
 .contenedor {
   width: 1000px;
   margin: 0 auto;
@@ -477,6 +481,12 @@ video {
 }
 .info__sobreFestival .info__sobreFestival__intro {
   text-align: justify;
+}
+
+.lineup {
+  background-color: #f53756;
+  padding: 2rem 0;
+  color: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */

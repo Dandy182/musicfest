@@ -39,7 +39,11 @@
         <section class="sobreFestival">
             <div class="contenedor sobreFestival__datos">
                 <div class="img__sobreFestival">
-                    <img src="./src/img/imagen_vocalista.jpg" alt="vocalista">
+                    <picture>
+                        <source srcset="./build/img/imagen_vocalista.webp" type="image/webp">
+                        <source srcset="./build/img/imagen_vocalista.avif" type="image/avif">
+                        <img loading="lazy" src="./src/img/imagen_vocalista.jpg" alt="vocalista">
+                    </picture>
                 </div>
                 <div class="info__sobreFestival">
 
@@ -49,5 +53,22 @@
                 </div>
             </div>
         </section>
+        <main class="lineup">
+            <div class="contenedor">
+                <h3>Line Up</h3>
+                <p>Viernes</p>
+                <div class="contenedorEvento">
+                    <div class="evento rock">
+                        <ul class="list">
+                            <li></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <p>Sábado</p>
+
+            </div>
+        </main>
     </body>
 </html>
