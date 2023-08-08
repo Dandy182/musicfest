@@ -18,6 +18,12 @@ function css(done){
     done()
 }
 
+function js(done){
+    src('./src/js/**/*.js')
+    .pipe(dest('./build/js'))
+    done()
+}
+
 function imgReducer(done){
     const op = {optimizationLevel:3};
 
@@ -53,11 +59,13 @@ function avif(done){
 
 
 function watcher(cb){
-    watch('./src/scss/app.scss', css)
+    watch('./src/scss/app.scss', css);
+    watch('./src/js/**/*.js', js);
 }
 
 
 exports.css = css;
+exports.js = js;
 exports.watcher = watcher;
 exports.versionWebp = versionWebp;
 exports.avif = avif;
