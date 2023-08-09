@@ -313,6 +313,7 @@ html {
 
 body {
   font-size: 1rem;
+  position: relative;
 }
 
 *,
@@ -368,6 +369,11 @@ p {
 video {
   display: block;
   max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

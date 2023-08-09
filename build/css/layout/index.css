@@ -181,4 +181,34 @@
   font-weight: 600;
 }
 
+.galeria {
+  padding: 2rem 0;
+}
+
+.galeria-imagenes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.686);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  align-items: center;
+}
+
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,32 @@
+@use '../globals/variables' as v;
+@use '../globals/mixings' as m;
+
+
+.galeria{
+    padding: v.$spaced 0 ;
+}
+
+.galeria-imagenes{
+    @include m.flex(row, space-around, 1rem){
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.686);
+    @include m.flex(row, center, 0){
+        align-items: center;
+    }
+
+}
