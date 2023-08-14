@@ -36,7 +36,7 @@ function crearGaleria(){
 
 
 
-
+//overlay con la imagen
 function mostrarImagen(id){
 
     const img = document.createElement('div')
@@ -52,12 +52,11 @@ function mostrarImagen(id){
 
     const cerrar = document.createElement('P')
     cerrar.classList.add('btnClose')
-    cerrar.innerText = 'P'
+    cerrar.innerText = 'X';
 
-
-
-
-
+    cerrar.addEventListener('click', ()=>{
+        overlay.remove()
+    })
 
     const body = document.querySelector('body')
     const overlay = document.createElement('div')
