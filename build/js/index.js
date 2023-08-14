@@ -38,17 +38,33 @@ function crearGaleria(){
 
 
 function mostrarImagen(id){
-    const imagen = document.createElement('picture')
-    imagen.innerHTML = ` 
+
+    const img = document.createElement('div')
+    img.innerHTML = `<picture> 
             <source srcset="/build/img/grande/${id}.webp" type="image/webp">
             <source srcset="/build/img/grande/${id}.avif" type="image/avif">
-            <img loading="lazy" src="/build/img/grande/${id}.jpg" alt="vocalista">`
+            <img loading="lazy" src="/build/img/grande/${id}.jpg" alt="vocalista">
+            </picture>
+            <div class='left lateral-btn'><</div>
+            <div class='right lateral-btn'>></div>
+            `
+    img.classList.add('imgContent')
 
-      const overlay = document.createElement('div')
-      overlay.appendChild(imagen)
-      overlay.classList.add('overlay')
-      
-      const body = document.querySelector('body')
-      body.appendChild(overlay)
+    const cerrar = document.createElement('P')
+    cerrar.classList.add('btnClose')
+    cerrar.innerText = 'P'
+
+
+
+
+
+
+    const body = document.querySelector('body')
+    const overlay = document.createElement('div')
+    overlay.classList.add('overlay')
+    overlay.appendChild(img)
+    overlay.appendChild(cerrar)
+    body.appendChild(overlay)
+
     console.log(`mostrando id: ${id}`)
 }
