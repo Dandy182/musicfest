@@ -45,8 +45,6 @@ function mostrarImagen(id){
             <source srcset="/build/img/grande/${id}.avif" type="image/avif">
             <img loading="lazy" src="/build/img/grande/${id}.jpg" alt="vocalista">
             </picture>
-            <div class='left lateral-btn'><</div>
-            <div class='right lateral-btn'>></div>
             `
     img.classList.add('imgContent')
 
@@ -55,15 +53,23 @@ function mostrarImagen(id){
     cerrar.innerText = 'X';
 
     cerrar.addEventListener('click', ()=>{
+        const body = document.querySelector('body')
+        body.classList.remove('body__fijo')
         overlay.remove()
     })
 
     const body = document.querySelector('body')
+    body.classList.add('body__fijo')
     const overlay = document.createElement('div')
     overlay.classList.add('overlay')
+
+    overlay.addEventListener('click',()=>{
+        const body = document.querySelector('body')
+        body.classList.remove('body__fijo')
+        overlay.remove()}) 
+    
     overlay.appendChild(img)
     overlay.appendChild(cerrar)
     body.appendChild(overlay)
 
-    console.log(`mostrando id: ${id}`)
 }

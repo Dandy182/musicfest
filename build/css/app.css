@@ -315,6 +315,9 @@ body {
   font-size: 1rem;
   position: relative;
 }
+body.body__fijo {
+  overflow: hidden;
+}
 
 *,
 *:after,
@@ -576,8 +579,8 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.436);
   display: flex;
@@ -586,32 +589,14 @@ ul {
   align-items: center;
   gap: 1rem;
 }
+@media only screen and (max-height: 600px) {
+  .overlay {
+    padding: 0 6.5rem;
+  }
+}
 .overlay .imgContent {
   position: relative;
-  max-width: 80%;
-}
-.overlay .imgContent .right {
-  right: 0;
-}
-.overlay .imgContent .left {
-  left: 0;
-}
-.overlay .imgContent .lateral-btn {
-  display: block;
-  position: absolute;
-  top: 50%;
-  font-weight: 600;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-  background-color: #752f97;
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
-.overlay .imgContent .lateral-btn:hover {
-  color: #fff;
-  background-color: #f53756;
-  transform: scale(0.8);
+  max-width: 65%;
 }
 .overlay .btnClose {
   background-color: #4CB8B3;
@@ -632,7 +617,6 @@ ul {
 .overlay picture {
   display: block;
   padding: 2rem 2rem 0 2rem;
-  height: 50%;
 }
 
 /*# sourceMappingURL=app.css.map */
