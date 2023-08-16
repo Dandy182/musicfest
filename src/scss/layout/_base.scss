@@ -21,6 +21,7 @@
     .btnNav{
         color:v.$blanco;
         font-family: v.$principalFont;
+        font-size: 1.8rem;
         transition: all .4s ease-in-out;
         &:hover{
             color:v.$rosa;

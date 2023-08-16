@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 function iniciarApp(){
     crearGaleria()
+    scrollNav();
     
 }
 
@@ -72,4 +73,17 @@ function mostrarImagen(id){
     overlay.appendChild(cerrar)
     body.appendChild(overlay)
 
+}
+
+
+function scrollNav(){
+    let enlaces = document.querySelectorAll('.btnNav');
+    
+    enlaces.forEach(enlace =>{ enlace.addEventListener("click", (e)=>{
+       
+        const selectScroll = e.target.attributes.id.value;
+        console.log(selectScroll)
+    })})
+
+    
 }

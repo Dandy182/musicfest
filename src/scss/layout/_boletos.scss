@@ -4,7 +4,10 @@
 
 .boletos{
     background-color:v.$verde;
-    padding: v.$spaced;
+    padding: 4rem 0;
+    h3{
+        color:v.$blanco;
+    }
     .contenedor__boletos{
         @include m.flex(row, space-around, v.$spaced){
             flex-wrap: wrap;

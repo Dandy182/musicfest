@@ -1,0 +1,10 @@
+@use '../globals//variables' as v;
+@use '../globals/mixings' as m;
+
+.site-footer{
+    background-color: v.$rosa;
+    text-align: center;
+    color:v.$blanco;
+    padding: .5rem;
+    text-transform: capitalize;
+}

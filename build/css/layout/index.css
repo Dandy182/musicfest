@@ -26,6 +26,7 @@
 .navegacionPrincipal .btnNav {
   color: #fff;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
   transition: all 0.4s ease-in-out;
 }
 .navegacionPrincipal .btnNav:hover {
@@ -215,7 +216,7 @@
 }
 .overlay .imgContent {
   position: relative;
-  max-width: 65%;
+  max-width: 60%;
 }
 .overlay .btnClose {
   background-color: #4CB8B3;
@@ -240,7 +241,10 @@
 
 .boletos {
   background-color: #4CB8B3;
-  padding: 2rem;
+  padding: 4rem 0;
+}
+.boletos h3 {
+  color: #fff;
 }
 .boletos .contenedor__boletos {
   display: flex;
@@ -283,6 +287,14 @@
   text-align: center;
   font-size: 1.5rem;
   padding: 1rem 0;
+}
+
+.site-footer {
+  background-color: #f53756;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=index.css.map */
