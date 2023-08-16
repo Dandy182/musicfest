@@ -8,6 +8,7 @@ html{
 
 body{
     font-size: 1rem;
+    font-family: v.$principalFont;
     position:relative;
     &.body__fijo{
         overflow: hidden;

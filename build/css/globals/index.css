@@ -313,6 +313,7 @@ html {
 
 body {
   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
   position: relative;
 }
 body.body__fijo {

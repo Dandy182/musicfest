@@ -1,0 +1,52 @@
+@use '../globals/variables' as v;
+@use '../globals//mixings' as m;
+
+
+.boletos{
+    background-color:v.$verde;
+    padding: v.$spaced;
+    .contenedor__boletos{
+        @include m.flex(row, space-around, v.$spaced){
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.pase{
+    width:40rem;
+    p{
+        text-align: center;
+        color:v.$blanco;
+    }
+    .pase__header{
+        text-align: center;
+        background-color: v.$rosa;
+        p{
+            padding:5px;
+            font-size:2rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+    .pase__body{
+        ul{
+            margin: 0;
+        }
+        
+        ul li{
+            background-color: v.$blanco;
+            font-size: 1.5rem;
+            padding:1.2rem 0 1.2rem 1rem;
+            border: .5px solid rgba(128, 128, 128, 0.331);
+        }
+    
+    }
+    .pase__footer{
+        background-color: v.$morado;
+        color:v.$blanco;
+        font-family: v.$principalFont;
+        text-align: center;
+        font-size:1.5rem;
+        padding:1rem 0
+    }
+}

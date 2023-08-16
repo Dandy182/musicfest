@@ -313,6 +313,7 @@ html {
 
 body {
   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
   position: relative;
 }
 body.body__fijo {
@@ -617,6 +618,53 @@ ul {
 .overlay picture {
   display: block;
   padding: 2rem 2rem 0 2rem;
+}
+
+.boletos {
+  background-color: #4CB8B3;
+  padding: 2rem;
+}
+.boletos .contenedor__boletos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pase {
+  width: 40rem;
+}
+.pase p {
+  text-align: center;
+  color: #fff;
+}
+.pase .pase__header {
+  text-align: center;
+  background-color: #f53756;
+}
+.pase .pase__header p {
+  padding: 5px;
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+.pase .pase__body ul {
+  margin: 0;
+}
+.pase .pase__body ul li {
+  background-color: #fff;
+  font-size: 1.5rem;
+  padding: 1.2rem 0 1.2rem 1rem;
+  border: 0.5px solid rgba(128, 128, 128, 0.331);
+}
+.pase .pase__footer {
+  background-color: #752f97;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
 
 /*# sourceMappingURL=app.css.map */
