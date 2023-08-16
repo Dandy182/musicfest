@@ -80,10 +80,10 @@ function scrollNav(){
     let enlaces = document.querySelectorAll('.btnNav');
     
     enlaces.forEach(enlace =>{ enlace.addEventListener("click", (e)=>{
-       
-        const selectScroll = e.target.attributes.id.value;
-        const seccion = document.querySelector(selectScroll)
-        console.log(selectScroll)
+       e.preventDefault()
+        const selectScroll = e.target.attributes.href.value;
+        const seccion = document.getElementById(selectScroll)
+        seccion.scrollIntoView({behavior: "smooth"});
     })})
 
     
