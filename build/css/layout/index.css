@@ -198,12 +198,13 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
-  width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.436);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
@@ -253,6 +254,7 @@
 .overlay picture {
   display: block;
   padding: 2rem 2rem 0 2rem;
+  height: 50%;
 }
 
 /*# sourceMappingURL=index.css.map */
