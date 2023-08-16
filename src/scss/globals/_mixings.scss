@@ -7,6 +7,12 @@
     }
 }
 
+@mixin screenCut($largo){
+    @media only screen and (max-height:$largo){
+        @content;
+    }
+}
+
 
 @mixin flex($direction:row, $justify:center, $gap:gap ){
     display:flex;

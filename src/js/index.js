@@ -45,8 +45,6 @@ function mostrarImagen(id){
             <source srcset="/build/img/grande/${id}.avif" type="image/avif">
             <img loading="lazy" src="/build/img/grande/${id}.jpg" alt="vocalista">
             </picture>
-            <div class='left lateral-btn'><</div>
-            <div class='right lateral-btn'>></div>
             `
     img.classList.add('imgContent')
 
