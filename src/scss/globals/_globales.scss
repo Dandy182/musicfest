@@ -9,6 +9,9 @@ html{
 body{
     font-size: 1rem;
     position:relative;
+    &.body__fijo{
+        overflow: hidden;
+    }
 }
 
 *,
