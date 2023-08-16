@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
 function iniciarApp(){
+    navegacionFija();
     crearGaleria()
     scrollNav();
+
     
 }
 
@@ -87,4 +89,18 @@ function scrollNav(){
     })})
 
     
+}
+
+function navegacionFija(){
+    const barra = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobreFestival'); 
+
+    window.addEventListener('scroll', () =>{
+        let moving = sobreFestival.getBoundingClientRect();
+        if(moving.bottom < 0 ){
+            barra.classList.add('fijo')
+        }else{
+            barra.classList.remove('fijo')
+        }
+    })
 }

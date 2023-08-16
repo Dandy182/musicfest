@@ -13,6 +13,12 @@ body{
     &.body__fijo{
         overflow: hidden;
     }
+
+    .fijo{
+        position: fixed;
+        width: 100%;
+        transition: all .4s ease;
+    }
 }
 
 *,

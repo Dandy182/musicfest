@@ -319,6 +319,11 @@ body {
 body.body__fijo {
   overflow: hidden;
 }
+body .fijo {
+  position: fixed;
+  width: 100%;
+  transition: all 0.4s ease;
+}
 
 *,
 *:after,
