@@ -100,7 +100,7 @@ function navegacionFija(){
         if(moving.bottom < 0 ){
             barra.classList.add('fijo')
         }else{
-            console.log('antes de los 28')
+            barra.classList.remove('fijo')
         }
     })
 }

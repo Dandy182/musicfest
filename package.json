@@ -26,12 +26,16 @@
     "sass": "^1.63.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1",
     "gulp-avif": "^1.1.1",
     "gulp-dart-sass": "^1.1.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
     "gulp-webp": "^4.0.1",
     "imagemin": "^7.0.0",
-    "plumber": "^0.4.8"
+    "plumber": "^0.4.8",
+    "postcss": "^8.4.28"
   }
 }

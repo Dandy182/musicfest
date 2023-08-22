@@ -1,7 +1,12 @@
 const {src, dest, watch, parallel} = require('gulp');
+//css
 const sass = require("gulp-dart-sass");
 const plumber = require('gulp-plumber');
 const cache = require('gulp-cache');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+
 
 //imagenes
 const imageMin = require('gulp-imagemin');
@@ -13,7 +18,8 @@ const webp = require('gulp-webp');
 function css(done){
     src('./src/scss/**/*.scss')
     .pipe(plumber())
-    .pipe(sass({outputStyle:'compressed'}))
+    .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest('build/css'))
     done()
 }
