@@ -6,6 +6,7 @@ const cache = require('gulp-cache');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
+const sourceMaps = require('gulp-sourcemaps')
 
 
 //imagenes
@@ -13,19 +14,26 @@ const imageMin = require('gulp-imagemin');
 const imgAvf = require('gulp-avif');
 const webp = require('gulp-webp');
 
+//js
+const terser = require('gulp-terser-js')
 
 
 function css(done){
     src('./src/scss/**/*.scss')
+    .pipe(sourceMaps.init)
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourceMaps.write('.'))
     .pipe(dest('build/css'))
     done()
 }
 
 function js(done){
     src('./src/js/**/*.js')
+    .pipe(sourceMaps.init())
+    .pipe(terser())
+    .pipe(sourceMaps.write('.'))
     .pipe(dest('./build/js'))
     done()
 }
