@@ -49,11 +49,11 @@
 }
 
 .rock p::after{
-    background-image: url('/build/img/icono_rock.png');
+    background-image: url('./build/img/icono_rock.png');
 }
 
 .EDM p::after{
-    background-image: url('/build/img/icono_edm.png');
+    background-image: url('./build/img/icono_edm.png');
 }
 
 .amarillo{

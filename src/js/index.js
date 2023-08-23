@@ -44,8 +44,8 @@ function mostrarImagen(id){
 
     const img = document.createElement('div')
     img.innerHTML = `<picture> 
-            <source srcset="/.build/img/grande/${id}.webp" type="image/webp">
-            <source srcset="/.build/img/grande/${id}.avif" type="image/avif">
+            <source srcset="./build/img/grande/${id}.webp" type="image/webp">
+            <source srcset="./build/img/grande/${id}.avif" type="image/avif">
             <img loading="lazy" src="./build/img/grande/${id}.jpg" alt="vocalista">
             </picture>
             `
