@@ -24,9 +24,9 @@ function crearGaleria(){
         let campo = document.createElement('li');
         let img = document.createElement('picture');
         img.innerHTML = ` 
-            <source srcset="/build/img/thumb/${i}.webp" type="image/webp">
-            <source srcset="/build/img/thumb/${i}.avif" type="image/avif">
-            <img loading="lazy" src="/build/img/thumb/${i}.jpg" alt="vocalista">`
+            <source srcset="./build/img/thumb/${i}.webp" type="image/webp">
+            <source srcset="./build/img/thumb/${i}.avif" type="image/avif">
+            <img loading="lazy" src="./build/img/thumb/${i}.jpg" alt="vocalista">`
 
             img.addEventListener('click', () =>{
                 mostrarImagen(i)
