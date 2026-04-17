@@ -17,10 +17,10 @@
   },
   "license": "ISC",
   "author": "\"Daniel Yesid Cely Robayo\"",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "gulp": "^5.0.1",
