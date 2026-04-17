@@ -1,0 +1,30 @@
+{
+  "name": "musicfest",
+  "version": "1.0.0",
+  "description": "\"Pagina para aprender sass, gulp, entre otras cosas\"",
+  "keywords": [
+    "\"sass",
+    "gulp",
+    "npm\""
+  ],
+  "homepage": "https://github.com/Dandy182/musicfest#readme",
+  "bugs": {
+    "url": "https://github.com/Dandy182/musicfest/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dandy182/musicfest.git"
+  },
+  "license": "ISC",
+  "author": "\"Daniel Yesid Cely Robayo\"",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.99.0"
+  }
+}
