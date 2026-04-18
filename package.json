@@ -20,11 +20,12 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "sass": "sass "
+    "sass": "gulp dev"
   },
   "devDependencies": {
     "gulp": "^5.0.1",
     "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.99.0"
   }
 }

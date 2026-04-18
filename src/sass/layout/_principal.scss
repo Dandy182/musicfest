@@ -1,0 +1,10 @@
+@use '../globales/variables' as v;
+
+.encabezado{
+    background-color: v.$verde;
+    .contenedor{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
