@@ -1,0 +1,17 @@
+@use '../globales/mixins' as m;
+
+.video{
+    position: relative;
+    height: 600px;
+    overflow-y: hidden;
+    video{
+        width: 100%;
+    }
+}
+
+.slogan{
+    position: absolute;
+    @include m.flex{
+        flex-direction: column;
+    };
+}

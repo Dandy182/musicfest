@@ -1,10 +1,27 @@
 @use '../globales/variables' as v;
-
+@use '../globales/mixins' as m;
 .encabezado{
     background-color: v.$verde;
     .contenedor{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        h1{
+            color:v.$blanco;
+        }
+        @include m.tablet
     }
 }
+
+.navegacion__principal{
+    @include m.tablet{
+         column-gap: 2rem;
+    };
+    a{
+        display: block;
+        text-align: center;
+        padding:1rem 0;
+        color:v.$blanco;
+        &:hover{
+            color:v.$amarillo;
+        }
+    }
+}
+
