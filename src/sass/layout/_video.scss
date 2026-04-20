@@ -1,17 +1,35 @@
 @use '../globales/mixins' as m;
+@use '../globales/variables' as v;
+@use 'sass:color';
 
 .video{
+    max-height: 600px;
     position: relative;
-    height: 600px;
-    overflow-y: hidden;
-    video{
+    overflow: hidden;
+    .slogan{
+        height: 100%;
         width: 100%;
+        background: linear-gradient(270deg, rgba(v.$morado, 60%), rgba(color.adjust(v.$morado, $blackness:20%), 60%)); 
+        position: absolute;
+        inset: 0;
+        @include m.flex(0, center ,left) {
+            flex-direction: column;
+        };
+
     }
 }
 
-.slogan{
-    position: absolute;
-    @include m.flex{
-        flex-direction: column;
-    };
-}
+.contenido__video{
+    h2{
+        color:v.$blanco;
+        font-size: 1.5rem;
+        }
+
+     p{
+        color: v.$blanco;
+        font-size: 3vh;
+        margin: 0;
+        background-color: v.$rosa;
+        display: inline;
+        }
+    }
