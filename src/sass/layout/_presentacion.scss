@@ -6,6 +6,9 @@
     @include m.tablet{
         gap:2rem;
         flex-basis:calc(50%);
+        .texto__presentacion, picture{
+            flex-basis: 50%;
+        }
     }
 
 
