@@ -22,14 +22,17 @@
 .contenido__video{
     h2{
         color:v.$blanco;
-        font-size: 1.5rem;
+        font-size: 3rem;
         }
-
-     p{
-        color: v.$blanco;
-        font-size: 3vh;
-        margin: 0;
-        background-color: v.$rosa;
-        display: inline;
+        
+        p{
+            color: v.$blanco;
+            font-size: 3vh;
+            font-weight: 700;
+            padding: .5rem 1rem;
+            margin: 0;
+            background-color: v.$rosa;
+            display: inline;
+            line-height: 1.5;
         }
     }

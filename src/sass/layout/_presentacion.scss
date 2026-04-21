@@ -1,0 +1,12 @@
+@use '../globales/mixins' as m;
+
+
+.contenido__presentacion{
+    padding:2rem 0;
+    @include m.tablet{
+        gap:2rem;
+        flex-basis:calc(50%);
+    }
+
+
+}

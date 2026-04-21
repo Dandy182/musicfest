@@ -2,6 +2,7 @@
 @use '../globales/mixins' as m;
 .encabezado{
     background-color: v.$verde;
+    padding:1rem 0;
     .contenedor{
         h1{
             color:v.$blanco;
