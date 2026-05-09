@@ -1,6 +1,39 @@
 @use '../globales/variables' as v;
+@use '../globales/mixins' as m;
 
 .lineUp{
     background-color: v.$rosa;
     padding: 2rem 0;
+    .dia{
+        color:v.$blanco;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.escenarios-contenedor{
+    @include m.tablet{
+        @include m.flex();
+    };
+}
+
+.escenario{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    .calendario{
+        font-size: 1rem;
+        padding: 0;
+        list-style: none;
+        li{
+            padding:.5rem 0
+        }
+    }
+}
+
+.bg-amarillo{
+    background-color: v.$amarillo;
+}
+
+.bg-verde{
+    background-color: v.$verde;
 }
