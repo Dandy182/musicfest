@@ -1,0 +1,6 @@
+@use '../globales/variables' as v;
+
+.lineUp{
+    background-color: v.$rosa;
+    padding: 2rem 0;
+}

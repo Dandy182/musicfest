@@ -16,3 +16,9 @@
     align-items: $align; 
     gap:$gap;
 }
+
+
+@mixin grid(){
+    @content;
+    display: grid;
+}
