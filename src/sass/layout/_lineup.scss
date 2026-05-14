@@ -1,5 +1,6 @@
 @use '../globales/variables' as v;
 @use '../globales/mixins' as m;
+@use 'sass:color';
 
 .lineUp{
     background-color: v.$rosa;
@@ -13,27 +14,44 @@
 
 .escenarios-contenedor{
     @include m.tablet{
-        @include m.flex();
+        @include m.flex(2rem);
     };
 }
 
 .escenario{
-    padding: 1rem;
+    padding: 1rem 0;
     margin-bottom: 1rem;
-    .calendario{
-        font-size: 1rem;
-        padding: 0;
-        list-style: none;
-        li{
-            padding:.5rem 0
+    width: 100%;
+}
+
+.calendario{
+    font-size: 1rem;
+    padding: 0;
+    list-style: none;
+    li{
+        padding: 1rem;
+        font-weight: 600;
+        span{
+            font-weight: 400;
         }
     }
 }
 
 .bg-amarillo{
     background-color: v.$amarillo;
+    li:nth-child(odd){
+        background-color: color.adjust(v.$amarillo, $blackness:5%);
+    }
 }
 
 .bg-verde{
     background-color: v.$verde;
+    li:nth-child(odd){
+        background-color: color.adjust(v.$verde, $blackness:5%);
+    }
+}
+
+.nombre-escenario{
+    text-align: center;
+    font-weight: 800;
 }
