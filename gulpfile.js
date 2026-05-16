@@ -2,6 +2,7 @@ import {src, dest, series, watch} from 'gulp';
 import sourcemaps from 'gulp-sourcemaps';
 import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass';
+import webp from 'gulp-webp';
 
 const sass = gulpSass(dartSass);
 
@@ -10,6 +11,7 @@ const sass = gulpSass(dartSass);
 
 const Route ={
     css:`./src/sass/**/*.scss`,
+    img:`./src/img/gallery`,
     dest:`./build/`
 } 
 
@@ -23,8 +25,20 @@ export function compilarCss(done){
         done()
 }
 
+export function webpConvert(done){
+    src(`${Route.img}/full/*`)
+        .pipe(webp())
+        .pipe(dest(`${dest}img`))
+}
 
 
+function avifConvert(done){
+    src(`${Route.img}/full`)
+        .pipe()
+
+    done()
+
+}
 
 
 
