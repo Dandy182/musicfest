@@ -1,0 +1,9 @@
+@use '../globales/variables' as v;
+@use '../globales/mixins' as m;
+
+.galeria{
+    padding: 2rem;
+    h3{
+        color: v.$negro;
+    }
+}

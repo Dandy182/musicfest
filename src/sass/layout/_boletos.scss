@@ -1,0 +1,39 @@
+@use '../globales/variables' as v;
+@use '../globales/mixins' as m;
+
+
+.contenedor-boletos{
+    background-color: v.$verde;
+    padding: 2rem 0;
+}
+
+.pase-header, 
+.pase-nombre{
+    text-align: center;
+    color:v.$blanco;
+
+}
+
+.pase-nombre{
+    font-weight: 600;
+}
+
+.pase-header{
+    background-color: v.$rosa;
+    p{
+        margin: 0;
+
+    }
+    
+}
+
+.pase-body{
+    ul{
+        margin: 0;
+        list-style: none;
+        li{
+            padding: .5rem 0;
+        }
+    }
+    background-color: v.$blanco;
+}
