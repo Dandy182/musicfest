@@ -20,7 +20,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "webp": "gulp webpConvert"
   },
   "devDependencies": {
     "gulp": "^5.0.1",

@@ -1,0 +1,13 @@
+@use '../globales/variables' as v;
+
+
+.footer{
+    background-color: v.$rosa;
+    padding: 1rem 0;
+    p{
+        margin: 0;
+        text-align: center;
+        color:v.$blanco;
+        font-size: 1.2rem;
+    }
+}

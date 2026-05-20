@@ -3,17 +3,17 @@ import sourcemaps from 'gulp-sourcemaps';
 import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass';
 import webp from 'gulp-webp';
+import avif from 'gulp-avif';
 
 const sass = gulpSass(dartSass);
 
-
-
-
 const Route ={
     css:`./src/sass/**/*.scss`,
-    img:`./src/img/gallery`,
-    dest:`./build/`
+    img:`./src/img/gallery/full`,
+    dest:`./build/`,
+    js:`./src/js/**/*.js`
 } 
+
 
 
 export function compilarCss(done){
@@ -25,23 +25,18 @@ export function compilarCss(done){
         done()
 }
 
+export function js(done){
+    src(Route.js)
+        .pipe(dest(`${Route.dest}/js`))
+    done();
+}
+
 export function webpConvert(done){
-    src(`${Route.img}/full/*`)
+    src('./src/img/**/*.{png, jpg')
         .pipe(webp())
-        .pipe(dest(`${dest}img`))
+        .pipe(dest('./build/img'))
+        done()
 }
-
-
-function avifConvert(done){
-    src(`${Route.img}/full`)
-        .pipe()
-
-    done()
-
-}
-
-
-
 
 
 
@@ -50,16 +45,10 @@ function avifConvert(done){
 
 export function dev(){
     watch(Route.css, compilarCss);
+    watch(Route.js, js);
 }
 
 
 
 
-
-
-
-
-
-
-
-series(compilarCss)
+export default series(compilarCss, js, dev, webpConvert)
