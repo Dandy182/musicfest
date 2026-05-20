@@ -1,6 +1,6 @@
 @use '../globales/variables' as v;
 @use '../globales/mixins' as m;
-
+@use 'sass:color';
 
 .contenedor-boletos{
     background-color: v.$verde;
@@ -8,6 +8,10 @@
     .boletos{
         .pase{
             width: 100%;
+            &:hover{
+                transform: scale(1.1);
+                transition: all .4s ease-in-out;
+            }
         }
         @include m.tablet{
             @include m.flex(1rem, space-around, top){
@@ -46,6 +50,7 @@
         li{
             padding: .5rem 0;
             font-size: 1rem;
+            border-bottom: 1px solid #e1e1e1e1;
         }
     }
     background-color: v.$blanco;
@@ -60,9 +65,15 @@
         color: v.$blanco;
         font-weight: 800;
         text-align: center;
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
         padding: 1rem;
         border-radius: 1rem;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: all .4s ease-in-out;
+            background-color: color.adjust(v.$morado, $blackness:20%);
+        }
     }
 }
