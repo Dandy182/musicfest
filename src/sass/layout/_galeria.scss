@@ -3,7 +3,39 @@
 
 .galeria{
     padding: 2rem;
+
     h3{
         color: v.$negro;
+    }
+    ul{
+        margin: 2rem 0;
+        list-style: none;
+        padding: 0;
+
+        @include m.tablet{
+        @include m.grid{
+                grid-template-columns: repeat(2, 1fr);
+                gap:1rem;
+                align-items: center;
+            }
+        }
+
+        @include m.desktop{
+            @include m.grid{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+    }
+}
+
+
+.lista-galeria{
+    li{
+        padding: .5rem 0;
+        img{
+            height: 10rem;
+            object-fit: cover;
+        }
     }
 }
