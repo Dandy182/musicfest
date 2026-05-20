@@ -1,5 +1,6 @@
 @use '../globales/variables' as v;
 @use '../globales/mixins' as m;
+
 .encabezado{
     background-color: v.$verde;
     padding:1rem 0;
@@ -7,13 +8,15 @@
         h1{
             color:v.$blanco;
         }
-        @include m.tablet
+        @include m.tablet{
+             @include m.flex(2rem, space-between, center);
+        }
     }
 }
 
 .navegacion__principal{
     @include m.tablet{
-         column-gap: 2rem;
+        @include m.flex;
     };
     a{
         display: block;

@@ -2,9 +2,6 @@
 @mixin tablet(){
     @media only screen and (min-width:800px){
         @content;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 }
 

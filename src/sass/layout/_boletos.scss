@@ -5,6 +5,16 @@
 .contenedor-boletos{
     background-color: v.$verde;
     padding: 2rem 0;
+    .boletos{
+        .pase{
+            width: 100%;
+        }
+        @include m.tablet{
+            @include m.flex(1rem, space-around, top){
+                max-width: 95%;
+            }
+        }
+    }
 }
 
 .pase-header, 
@@ -20,6 +30,7 @@
 
 .pase-header{
     background-color: v.$rosa;
+    padding: 1rem 0;
     p{
         margin: 0;
 
@@ -30,10 +41,28 @@
 .pase-body{
     ul{
         margin: 0;
+        padding:0 1rem;
         list-style: none;
         li{
             padding: .5rem 0;
+            font-size: 1rem;
         }
     }
     background-color: v.$blanco;
+}
+
+.pase-footer{
+    background-color: v.$blanco;
+    padding: 2rem 0;
+
+    p{
+        background-color: v.$morado;
+        color: v.$blanco;
+        font-weight: 800;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
 }
