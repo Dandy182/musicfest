@@ -17,7 +17,7 @@ function crearGaleria(){
     for(let i =1; i<=16;i++){
         const campo = document.createElement('li')
         const imagen = document.createElement('img')
-        imagen.src = `/build/img/${i}.jpg`;
+        imagen.src = `./build/img/${i}.jpg`;
         imagen.alt = `Imagen${i}`
 
         campo.appendChild(imagen);
