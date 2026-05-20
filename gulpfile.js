@@ -51,7 +51,4 @@ export function dev(){
     watch(Route.js, js);
 }
 
-
-
-
 export default series(compilarCss, js, webpConvert, avifConvert, dev)
