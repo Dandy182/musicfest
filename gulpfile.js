@@ -9,7 +9,7 @@ const sass = gulpSass(dartSass);
 
 const Route ={
     css:`./src/sass/**/*.scss`,
-    img:`./src/img/gallery/full`,
+    img:`./src/img/gallery/`,
     dest:`./build/`,
     js:`./src/js/**/*.js`
 } 
@@ -26,22 +26,25 @@ export function compilarCss(done){
 }
 
 export function js(done){
-    src(Route.js)
+    src(`${Route.js}`)
         .pipe(dest(`${Route.dest}/js`))
     done();
 }
 
 export function webpConvert(done){
-    src('./src/img/**/*.{png, jpg')
+    src(`${Route.img}/full/*.{png,jpg}`, {encoding: false})
         .pipe(webp())
-        .pipe(dest('./build/img'))
+        .pipe(dest(`${Route.dest}img`))
         done()
 }
 
 
-
-
-
+export function avifConvert(done){
+    src(`${Route.img}/full/*.{jpg,png}`,{encoding:false})
+        .pipe(avif())
+        .pipe(dest( `${Route.dest}img`))
+        done()
+}
 
 export function dev(){
     watch(Route.css, compilarCss);
@@ -51,4 +54,4 @@ export function dev(){
 
 
 
-export default series(compilarCss, js, dev, webpConvert)
+export default series(compilarCss, js, webpConvert, avifConvert, dev)

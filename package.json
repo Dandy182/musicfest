@@ -21,7 +21,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp dev",
-    "webp": "gulp webpConvert"
+    "webp": "gulp webpConvert",
+    "avif": "gulp avifConvert",
+    "all": "gulp"
   },
   "devDependencies": {
     "gulp": "^5.0.1",

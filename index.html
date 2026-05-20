@@ -39,7 +39,9 @@
         <section class="contenedor">
             <div class="contenido__presentacion">
                 <picture>
-                    <img src="./src/img/imagen_dj.jpg" alt="dj">
+                    <source srcset="./build/img/imagen_dj.webp" type="image/webp">
+                    <source srcset="./build/img/imagen_dj.avif" type="image/avif">
+                    <img loading="lazy" src="./src/img/gallery/full/imagen_dj.jpg" alt="dj">
                 </picture>
 
                 <div class="texto__presentacion">
