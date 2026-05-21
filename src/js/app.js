@@ -18,12 +18,34 @@ function crearGaleria(){
         const campo = document.createElement('li')
         const imagen = document.createElement('img')
         imagen.src = `./build/img/${i}.jpg`;
-        imagen.alt = `Imagen${i}`
+        imagen.alt = `Imagen${i}`;
+
+        //event handler
+        imagen.onclick = ()=> crearImangen(i);
 
         campo.appendChild(imagen);
         lista.appendChild(campo);
     }
 
     area.appendChild(lista);
+
+}
+
+
+
+function crearImangen(i){
+    //creación del modal
+
+    const modal = document.createElement('div');
+        modal.classList.add("modal")
+
+    const pagina = document.querySelector('body');
+        pagina.appendChild(modal)
+
+    const imagen = document.createElement('img')
+    imagen.src = `./build/img/${i}.jpg`;
+    imagen.alt = `Imagen${i}`;
+
+    modal.appendChild(imagen);
 
 }
