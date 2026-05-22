@@ -49,3 +49,8 @@ function crearImangen(i){
     modal.appendChild(imagen);
 
 }
+
+
+function cerrarModal(){
+    const modal = document.querySelector(".modal");
+}

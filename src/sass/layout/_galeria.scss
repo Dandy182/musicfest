@@ -1,6 +1,6 @@
 @use '../globales/variables' as v;
 @use '../globales/mixins' as m;
-
+@use 'sass:color';
 .galeria{
     padding: 2rem;
 
@@ -38,4 +38,10 @@
             object-fit: cover;
         }
     }
+}
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba($color: v.$negro, $alpha: 0.47)
 }
