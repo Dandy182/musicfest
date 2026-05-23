@@ -1,6 +1,8 @@
 @use '../globales/variables' as v;
 @use '../globales/mixins' as m;
 @use 'sass:color';
+
+
 .galeria{
     padding: 2rem;
 
@@ -43,5 +45,21 @@
 .modal{
     position: fixed;
     inset: 0;
-    background-color: rgba($color: v.$negro, $alpha: 0.47)
+    background-color: rgba($color: v.$negro, $alpha: 0.47);
+    padding: 2rem;
+
+    @include m.flex(){
+        flex-direction: column;
+
+    }
+
+    img{
+        width: 70%;
+        margin:0 auto;
+    }
+
+    .btn-cierre{
+        display: block;
+        text-align: center;
+    }
 }

@@ -18,7 +18,7 @@ function crearGaleria(){
         const campo = document.createElement('li')
         const imagen = document.createElement('img')
         imagen.src = `./build/img/${i}.jpg`;
-        imagen.alt = `Imagen${i}`;
+        imagen.alt = `Imagen ${i}`;
 
         //event handler
         imagen.onclick = ()=> crearImangen(i);
@@ -46,7 +46,12 @@ function crearImangen(i){
     imagen.src = `./build/img/${i}.jpg`;
     imagen.alt = `Imagen${i}`;
 
+     const cierre = document.createElement("p");
+     cierre.classList.add('btn-cierre');
+        cierre.textContent = "x";
+
     modal.appendChild(imagen);
+    modal.appendChild(cierre);
 
 }
 
