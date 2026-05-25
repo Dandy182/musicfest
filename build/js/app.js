@@ -50,6 +50,8 @@ function crearImangen(i){
      cierre.classList.add('btn-cierre');
         cierre.textContent = "x";
 
+        cierre.onclick = cerrarModal;
+
     modal.appendChild(imagen);
     modal.appendChild(cierre);
 
@@ -58,4 +60,5 @@ function crearImangen(i){
 
 function cerrarModal(){
     const modal = document.querySelector(".modal");
+    modal?.remove();
 }

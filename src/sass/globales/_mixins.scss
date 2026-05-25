@@ -1,3 +1,11 @@
+@mixin mobile(){
+    @media only screen and (max-height:600px){
+        @content;
+    }
+}
+
+
+
 
 @mixin tablet(){
     @media only screen and (min-width:600px){
