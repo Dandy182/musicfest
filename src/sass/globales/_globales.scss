@@ -17,6 +17,10 @@ body{
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+
+    &.overflow-hidden{
+        overflow: hidden;
+    }
 }
 
 h1, h2, h3, h3{

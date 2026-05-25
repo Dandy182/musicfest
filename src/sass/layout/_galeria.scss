@@ -46,11 +46,17 @@
     position: fixed;
     inset: 0;
     background-color: rgba($color: v.$negro, $alpha: 0.47);
+    animation: fadeIn ease-in .4s;
     @include m.flex($gap:.2rem){
         flex-direction: column;
         align-items: center;
+        place-items: center;
     }
     
+    &.fadeOut{
+        animation: fadeOut ease-out .4s;
+        
+    }
     img{
         padding: 2rem;
         max-width: 75rem;
@@ -76,5 +82,24 @@
             color:v.$negro;
             cursor: pointer;
         }
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
     }
 }

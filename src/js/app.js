@@ -40,6 +40,7 @@ function crearImangen(i){
         modal.classList.add("modal")
 
     const pagina = document.querySelector('body');
+    pagina.classList.add("overflow-hidden")
         pagina.appendChild(modal)
 
     const imagen = document.createElement('img')
@@ -60,5 +61,8 @@ function crearImangen(i){
 
 function cerrarModal(){
     const modal = document.querySelector(".modal");
-    modal?.remove();
+    modal.classList.add("fadeOut");
+
+    setTimeout(()=>modal?.remove(), 500)
+    
 }
