@@ -4,10 +4,11 @@
 .contenido__presentacion{
     padding:2rem 0;
     @include m.tablet{
-        gap:2rem;
-        flex-basis:calc(50%);
-        .texto__presentacion, picture{
-            flex-basis: 50%;
+        @include m.flex(){
+            flex-basis:calc(50%);
+            .texto__presentacion, picture{
+                flex-basis: 50%;
+            }
         }
     }
 

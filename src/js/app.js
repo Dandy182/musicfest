@@ -1,8 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function(){
-
+    navegacionFija();
     crearGaleria();
-
 })
 
 
@@ -31,8 +30,6 @@ function crearGaleria(){
 
 }
 
-
-
 function crearImangen(i){
     //creación del modal
 
@@ -58,11 +55,28 @@ function crearImangen(i){
 
 }
 
-
 function cerrarModal(){
     const modal = document.querySelector(".modal");
     modal.classList.add("fadeOut");
 
     setTimeout(()=>modal?.remove(), 500)
     
+}
+
+function navegacionFija(){
+    const header = document.querySelector('.encabezado');
+    const presentacion = document.querySelector('presentacion');
+
+    window.addEventListener('scroll', ()=> {
+        let alto = (header.getBoundingClientRect().bottom * -1 );
+
+        console.log(alto);
+
+        if(alto > 560){
+            header.classList.remove('fixed');
+        }else{
+            header.classList.add('fixed');
+        }
+
+    })
 }
