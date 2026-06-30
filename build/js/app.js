@@ -57,9 +57,7 @@ function crearImangen(i){
 
 function cerrarModal(){
     const modal = document.querySelector(".modal");
-    modal.classList.add("fadeOut");
-
-    setTimeout(()=>modal?.remove(), 500)
+    modal?.remove() 
     
 }
 
@@ -68,14 +66,12 @@ function navegacionFija(){
    const presentacion = document.querySelector(".presentacion");
 
    document.addEventListener('scroll', function(){
-    console.log(presentacion.getBoundingClientRect().bottom)
+    
     if(presentacion.getBoundingClientRect().bottom < 500 ){
        encabezado.classList.add('fixed');
     }else{
         encabezado.classList.remove('fixed');
     }
-
-
 
    })
 }

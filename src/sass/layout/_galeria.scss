@@ -53,10 +53,11 @@
         place-items: center;
     }
     
-    &.fadeOut{
+   /* &.fadeOut{
         animation: fadeOut ease-out .4s;
         
     }
+        */
     img{
         padding: 2rem;
         max-width: 75rem;
@@ -84,6 +85,7 @@
         }
     }
 }
+
 @keyframes fadeIn{
     0%{
         opacity: 0;
@@ -93,7 +95,7 @@
         opacity: 1;
     }
 }
-
+/*
 @keyframes fadeOut{
     0%{
         opacity: 1;
@@ -103,3 +105,4 @@
         opacity: 0;
     }
 }
+    */

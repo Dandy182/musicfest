@@ -52,14 +52,11 @@ function crearImangen(i){
 
     modal.appendChild(imagen);
     modal.appendChild(cierre);
-
 }
 
 function cerrarModal(){
     const modal = document.querySelector(".modal");
-    modal.classList.add("fadeOut");
-
-    setTimeout(()=>modal?.remove(), 500)
+    modal?.remove() 
     
 }
 
