@@ -64,19 +64,18 @@ function cerrarModal(){
 }
 
 function navegacionFija(){
-    const header = document.querySelector('.encabezado');
-    const presentacion = document.querySelector('presentacion');
+   const encabezado = document.querySelector(".encabezado");
+   const presentacion = document.querySelector(".presentacion");
 
-    window.addEventListener('scroll', ()=> {
-        let alto = (header.getBoundingClientRect().bottom * -1 );
+   document.addEventListener('scroll', function(){
+    console.log(presentacion.getBoundingClientRect().bottom)
+    if(presentacion.getBoundingClientRect().bottom < 500 ){
+       encabezado.classList.add('fixed');
+    }else{
+        encabezado.classList.remove('fixed');
+    }
 
-        console.log(alto);
 
-        if(alto > 560){
-            header.classList.remove('fixed');
-        }else{
-            header.classList.add('fixed');
-        }
 
-    })
+   })
 }
