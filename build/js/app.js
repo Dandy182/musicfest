@@ -52,11 +52,12 @@ function crearImangen(i){
 
     modal.appendChild(imagen);
     modal.appendChild(cierre);
-
 }
 
 function cerrarModal(){
+    const pagina = document.querySelector('body');
     const modal = document.querySelector(".modal");
+        pagina.classList.remove("overflow-hidden");
     modal?.remove() 
     
 }
