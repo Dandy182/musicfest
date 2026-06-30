@@ -68,14 +68,12 @@ function navegacionFija(){
    const presentacion = document.querySelector(".presentacion");
 
    document.addEventListener('scroll', function(){
-    console.log(presentacion.getBoundingClientRect().bottom)
+    
     if(presentacion.getBoundingClientRect().bottom < 500 ){
        encabezado.classList.add('fixed');
     }else{
         encabezado.classList.remove('fixed');
     }
-
-
 
    })
 }
