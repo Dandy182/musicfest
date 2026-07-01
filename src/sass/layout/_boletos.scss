@@ -4,7 +4,8 @@
 
 .contenedor-boletos{
     background-color: v.$verde;
-    padding: 4rem 0;
+    height: 849px;
+    padding: 6rem 0;
     .boletos{
         .pase{
             width: 100%;
@@ -48,8 +49,8 @@
         padding:0 1rem;
         list-style: none;
         li{
-            padding: .5rem 0;
-            font-size: 1rem;
+            padding: 1rem 0;
+            font-size: 1.5rem;
             border-bottom: 1px solid #e1e1e1e1;
         }
     }
