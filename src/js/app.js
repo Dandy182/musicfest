@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     navegacionFija();
     crearGaleria();
     resaltadorDeEnlaces();
+    scrollNav();
 })
 
 
@@ -100,11 +101,26 @@ function resaltadorDeEnlaces(){
         navLinks.forEach(link => {
             link.classList.remove('active');
             if(link.getAttribute('href') === `#${actual}`){
-                console.log(`${link.getAttribute('href')} : #${actual}`)
                 link.classList.add('active')
             }
         })
         })
     })
    
+}
+
+
+function scrollNav(){
+    const navLinks = document.querySelectorAll('.navegacion__principal a')
+    navLinks.forEach(link => {
+
+        link.addEventListener('click', e =>{
+            e.preventDefault();
+            const sectionScroll = e.target.getAttribute('href');
+
+            const section = document.querySelector(sectionScroll);
+            section.scrollIntoView({behavior:'smooth'});
+            
+        })
+    })
 }
