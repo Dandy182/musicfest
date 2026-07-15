@@ -81,15 +81,30 @@ function navegacionFija(){
 function resaltadorDeEnlaces(){
     document.addEventListener('scroll', function(){
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.navegacion__principal a')
+        const navLinks = document.querySelectorAll('.navegacion__principal a');
 
+        let actual = '';
         sections.forEach(section =>{
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
+            const sectionHeigth = section.clientHeight;
+            const scrollY = window.scrollY;
             
-            if(window.scrollY >= (sectionTop - (sectionHeight / 3))){
-                console.log(section.id)
+            if(scrollY >= 600 && scrollY < 1700 && section.getAttribute('id') === "LineUp"){
+               actual = section.getAttribute('id');
+                }else if(scrollY >= 1700 && scrollY < 2200 && section.getAttribute('id') === "Galeria"){
+                actual = section.getAttribute('id');
+                }else if(scrollY >= 2200 && section.getAttribute('id') === "Boletos"){
+                actual = section.getAttribute('id');
+             }
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if(link.getAttribute('href') === `#${actual}`){
+                console.log(`${link.getAttribute('href')} : #${actual}`)
+                link.classList.add('active')
             }
         })
+        })
     })
+   
 }

@@ -35,8 +35,9 @@
         text-align: center;
         padding:1rem 0;
         color:v.$blanco;
-        &:hover{
+        &:hover, &.active{
             color:v.$amarillo;
+            font-size: 600;
         }
     }
 }
