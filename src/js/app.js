@@ -109,7 +109,6 @@ function resaltadorDeEnlaces(){
    
 }
 
-
 function scrollNav(){
     const navLinks = document.querySelectorAll('.navegacion__principal a')
     navLinks.forEach(link => {
